@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="ja">
+  <head>
+    <meta charset="utf-8" />
+    <title>渋滞状況</title>
+    <meta
+      name="viewport"
+      content="initial-scale=1,maximum-scale=1,user-scalable=no"
+    />
+    <script src="https://api.mapbox.com/mapbox-gl-js/v2.4.1/mapbox-gl.js"></script>
+    <script src="https://api.mapbox.com/mapbox-gl-js/plugins/mapbox-gl-language/v1.0.0/mapbox-gl-language.js"></script>
+    <script src="https://api.mapbox.com/mapbox-gl-js/plugins/mapbox-gl-geocoder/v4.7.0/mapbox-gl-geocoder.min.js"></script>
+    <script src="script.js"></script>
+    <link
+      href="https://api.mapbox.com/mapbox-gl-js/v2.4.1/mapbox-gl.css"
+      rel="stylesheet"
+    />
+    <link
+      rel="stylesheet"
+      href="https://api.mapbox.com/mapbox-gl-js/plugins/mapbox-gl-geocoder/v4.7.0/mapbox-gl-geocoder.css"
+      type="text/css"
+    />
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <div id="geocoder" class="geocoder"></div>
+    <div id="map"></div>
+    <div id="menu">
+      <input id="traffic" type="checkbox" name="rtoggle" value="traffic" />
+      <label for="traffic">混雑状況</label>
+    </div>
+    <div id="legend">
+      <div class="legend-item">
+        <div class="legend-color" style="background-color: #6a0572"></div>
+        <span>非常に混雑</span>
+      </div>
+      <div class="legend-item">
+        <div class="legend-color" style="background-color: #b80f0a"></div>
+        <span>やや混雑</span>
+      </div>
+      <div class="legend-item">
+        <div class="legend-color" style="background-color: #ff7f0e"></div>
+        <span>混雑している</span>
+      </div>
+      <div class="legend-item">
+        <div class="legend-color" style="background-color: #2e8b57"></div>
+        <span>混雑していない</span>
+      </div>
+    </div>
+  </body>
+</html>
